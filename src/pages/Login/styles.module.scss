@@ -78,15 +78,37 @@
 
   .hello {
     padding-left: 80px;
+    font-size: 2.5rem;
   }
 
-  .image-wrapper {
+  .image_wrapper {
     width: 100%;
     & img {
       width: 70px;
       position: absolute;
       left: 0;
       top: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 539px) {
+  .container {
+    display: block;
+    position: relative;
+  }
+
+  .hello {
+    padding-left: 50px;
+    font-size: 2.3rem;
+  }
+
+  .image_wrapper {
+    width: 100%;
+    & img {
+      width: 50px;
+      position: absolute;
+      left: 0;
     }
   }
 }

@@ -1,9 +1,10 @@
 .Todo_wrapper {
+  display: flex;
+  gap: 5px;
   border-radius: 5px;
-  padding: 15px;
+  padding: 12px;
   transition: all 0.3s;
   margin: 5px;
-  display: flex;
   align-items: center;
   border: 1px solid var(--color-primary);
 
@@ -62,7 +63,6 @@
   font-size: 23px;
   text-align: center;
   vertical-align: middle;
-  margin-left: 10px;
   transition: all 0.3s;
   background-color: transparent;
 
@@ -93,17 +93,25 @@
 }
 
 .Todo_content {
+  flex: 1;
   border: none;
   outline: none;
-  margin-left: 10px;
   font-size: 17px;
   white-space: pre-wrap;
   line-break: anywhere;
-  flex: 1;
+  word-break: break-all;
   transition: all 0.3s;
   background-color: transparent;
+  min-width: 20px;
+  overflow-x: scroll;
 
   &:disabled {
     border: none;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .Todo_content {
+    font-size: 14px;
   }
 }
