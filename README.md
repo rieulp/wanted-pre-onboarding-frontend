@@ -16,7 +16,7 @@
 
 ## 배포 링크
 
-[]()
+**[보러가기](wanted-pre-onboarding-frontend.vercel.app)**
 
 ## 기술 스택
 
