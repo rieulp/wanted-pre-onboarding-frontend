@@ -1,0 +1,109 @@
+.Todo_wrapper {
+  border-radius: 5px;
+  padding: 15px;
+  transition: all 0.3s;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-primary);
+
+  &.done {
+    border: none;
+    background-color: var(--color-gray_alpha_30);
+
+    & .checkButton::after {
+      content: '✔';
+      border-color: green;
+      background-color: green;
+      color: white;
+    }
+
+    & .Todo_content {
+      font-size: 15px;
+      color: var(--color-gray);
+    }
+  }
+}
+
+.Checkbox {
+  position: relative;
+  width: 21px;
+  height: 21px;
+  & input[type='checkbox'] {
+    display: none;
+  }
+
+  & .checkButton {
+    cursor: pointer;
+
+    &:hover::after {
+      transform: scale(1.05);
+      border-color: green;
+    }
+    &::after {
+      box-sizing: border-box;
+      content: '';
+      font-size: 12px;
+      color: transparent;
+      position: absolute;
+      width: 21px;
+      height: 21px;
+      border: 2px solid var(--color-gray);
+      text-align: center;
+      border-radius: 30px;
+      transition: all 0.5s;
+      background-color: white;
+    }
+  }
+}
+
+.Button {
+  cursor: pointer;
+  font-size: 23px;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 10px;
+  transition: all 0.3s;
+  background-color: transparent;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+  &.ok {
+    font-size: 15px;
+    color: green;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid green;
+  }
+  &.cancle {
+    font-size: 15px;
+    border: 1px solid var(--color-red);
+    color: var(--color-red);
+    padding: 5px 10px;
+    border-radius: 20px;
+  }
+  &.edit {
+    color: var(--color-gray-dark);
+  }
+
+  &.close {
+    color: var(--color-red);
+  }
+}
+
+.Todo_content {
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  font-size: 17px;
+  white-space: pre-wrap;
+  line-break: anywhere;
+  flex: 1;
+  transition: all 0.3s;
+  background-color: transparent;
+
+  &:disabled {
+    border: none;
+  }
+}

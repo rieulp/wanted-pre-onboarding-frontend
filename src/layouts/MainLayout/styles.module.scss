@@ -1,0 +1,30 @@
+.header {
+  background-color: var(--color-primary);
+  padding: 12px 1rem;
+
+  & .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    max-width: 1260px;
+    margin: 0 auto;
+  }
+
+  & .name {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  & button:not(:disabled):hover {
+    background: var(--color-primary);
+    color: white;
+  }
+}
+
+.main {
+  min-height: calc(100vh - 107px - 2rem);
+  height: 1px;
+}
