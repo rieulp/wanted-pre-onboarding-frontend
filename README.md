@@ -25,9 +25,10 @@
 - SCSS
 - axios
 
-### 과제
+## 과제
 
----
+<details>
+<summary>자세히</summary>
 
 #### 1. 로그인 / 회원가입
 
@@ -218,3 +219,5 @@
 
 - status: 204 No Content
 - body: 없음
+
+</details>
