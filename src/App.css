@@ -1,7 +1,7 @@
 :root {
   --color-primary: slateblue;
   --color-red: #c93434;
-  --color-gray_dark: #414141;
+  --color-gray-dark: #777;
   --color-gray: #c2c2c2;
   --color-gray_alpha_30: #c2c2c24d;
   --color-white_alpha_30: #ffffff80;
@@ -14,6 +14,8 @@ body {
 }
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 a {

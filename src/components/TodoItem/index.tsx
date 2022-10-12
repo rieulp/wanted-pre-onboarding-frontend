@@ -51,19 +51,24 @@ const TodoItem = ({ id, todo, isCompleted, onUpdate }: ITodoItemProps) => {
         />
         <label htmlFor={`completedCheck${id}`} className={styles.checkButton}></label>
       </div>
-      <input
-        onKeyDown={(e) => {
-          if (e.code === 'Enter') {
-            if (todo !== todoText) setRequireUpdate(true);
-            setEdit(false);
-          }
-        }}
-        className={styles.Todo_content}
-        value={todoText}
-        disabled={!edit}
-        onChange={onChangeTodoText}
-        ref={inputRef}
-      />
+      <div className={styles.Todo_content}>
+        {edit ? (
+          <input
+            onKeyDown={(e) => {
+              if (e.code === 'Enter') {
+                if (todo !== todoText) setRequireUpdate(true);
+                setEdit(false);
+              }
+            }}
+            value={todoText}
+            disabled={!edit}
+            onChange={onChangeTodoText}
+            ref={inputRef}
+          />
+        ) : (
+          <p>{todoText}</p>
+        )}
+      </div>
       {edit ? (
         <>
           <button

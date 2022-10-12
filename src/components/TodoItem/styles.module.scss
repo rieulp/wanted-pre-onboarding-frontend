@@ -11,18 +11,6 @@
   &.done {
     border: none;
     background-color: var(--color-gray_alpha_30);
-
-    & .checkButton::after {
-      content: '✔';
-      border-color: green;
-      background-color: green;
-      color: white;
-    }
-
-    & .Todo_content {
-      font-size: 15px;
-      color: var(--color-gray);
-    }
   }
 }
 
@@ -71,15 +59,17 @@
   }
   &.ok {
     font-size: 15px;
-    color: green;
+    background-color: green;
     padding: 5px 10px;
     border-radius: 20px;
     border: 1px solid green;
+    color: white;
   }
   &.cancle {
     font-size: 15px;
     border: 1px solid var(--color-red);
-    color: var(--color-red);
+    background-color: var(--color-red);
+    color: white;
     padding: 5px 10px;
     border-radius: 20px;
   }
@@ -94,24 +84,42 @@
 
 .Todo_content {
   flex: 1;
-  border: none;
-  outline: none;
   font-size: 17px;
   white-space: pre-wrap;
   line-break: anywhere;
   word-break: break-all;
-  transition: all 0.3s;
   background-color: transparent;
   min-width: 20px;
-  overflow-x: scroll;
+  transition: all 0.3s;
 
-  &:disabled {
+  & input {
+    width: 100%;
     border: none;
+    padding: 5px 0;
+  }
+}
+
+.done {
+  & .Checkbox {
+    & .checkButton::after {
+      content: '✔';
+      border-color: green;
+      background-color: green;
+      color: white;
+    }
+  }
+  & .Todo_content {
+    font-size: 15px;
+    color: var(--color-gray-dark);
   }
 }
 
 @media screen and (max-width: 412px) {
   .Todo_content {
     font-size: 14px;
+  }
+
+  .done .Todo_content {
+    font-size: 13px;
   }
 }
