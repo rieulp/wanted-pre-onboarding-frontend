@@ -6,7 +6,7 @@ interface ButtonProps {
   onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   disabled?: boolean;
   type?: 'submit' | 'reset' | 'button';
-  size?: 'small' | 'midium' | 'large';
+  size?: 'small' | 'medium' | 'large';
   fullWidth?: boolean;
   className?: string;
 }
@@ -27,7 +27,7 @@ const Button = ({ children, onClick, disabled, type, fullWidth, className, size 
 
 Button.defaultProps = {
   type: 'button',
-  size: 'midium',
+  size: 'medium',
 };
 
 export default Button;

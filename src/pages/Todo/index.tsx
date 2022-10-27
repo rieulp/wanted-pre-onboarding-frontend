@@ -44,7 +44,7 @@ function Todo() {
     <MainLayout>
       <form className={styles.Todo_buttons}>
         <Input className={styles.newTodo_input} label="새로운 할일" onChange={onChangeNewTodo} value={newTodo} fullWidth type="text" />
-        <Button type="submit" onClick={createNewTodo} size="midium">
+        <Button type="submit" onClick={createNewTodo} size="medium">
           추가
         </Button>
       </form>

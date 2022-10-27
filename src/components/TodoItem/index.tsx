@@ -80,7 +80,7 @@ const TodoItem = ({ id, todo, isCompleted, onUpdate }: ITodoItemProps) => {
           >
             제출
           </button>
-          <button className={[styles.Button, styles.cancle].join(' ')} onClick={() => setEdit(false)}>
+          <button className={[styles.Button, styles.cancel].join(' ')} onClick={() => setEdit(false)}>
             취소
           </button>
         </>
